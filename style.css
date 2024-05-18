@@ -1,0 +1,486 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --dark-gray: hsl(0, 0%, 55%);
+  --very-dark-gray: hsl(0, 0%, 41%);
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+a {
+  text-decoration: none;
+  color: var(--white);
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+
+.heading {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: var(--black);
+  text-transform: uppercase;
+  font-size: 2.75rem;
+  color: var(--black);
+}
+
+/* ============== Hero Container==================== */
+.hero-container nav {
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3vw 5vw;
+  padding-left: 5vw;
+  align-content: center;
+}
+
+.hamburger-icon.hide {
+  display: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.4rem;
+}
+
+.nav-link:hover {
+  color: var(--dark-gray);
+}
+
+/* ============== Hero ================== */
+
+.hero-container {
+  height: 650px;
+  width: 100%;
+  background-image: url("../public/images/desktop/image-hero.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero-content {
+  position: absolute;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  top: 44%;
+  left: 5vw;
+  right: 0;
+  color: var(--white);
+  border: 5px solid var(--white);
+  font-size: 3.75rem;
+  text-transform: uppercase;
+  padding: 0 2rem;
+  width: 55%;
+  height: auto;
+  display: grid;
+  align-content: center;
+}
+
+.img-background {
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 650px;
+  position: absolute;
+}
+
+.logo {
+  z-index: 1;
+}
+
+/* =================Main==================== */
+main {
+  /* margin: 10rem 5rem; */
+  width: 100%;
+  padding: 10vw 5vw;
+  display: grid;
+  place-content: center;
+}
+
+/* =========About Us ================ */
+.about-us-container {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  position: relative;
+}
+
+.about-us-content {
+  background-color: var(--white);
+  position: absolute;
+  bottom: 0;
+  left: 53vw;
+  padding-top: 8vh;
+  padding-left: 5vw;
+  display: grid;
+  align-content: center;
+}
+
+.text {
+  padding-top: 2rem;
+  color: var(--dark-gray);
+}
+
+/* ========Gallery============ */
+.gallery-container {
+  padding-top: 10rem;
+}
+
+.gallery-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ad-container {
+  margin: 2rem 0;
+}
+.ad-container img {
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.btn {
+  color: var(--black);
+  padding: 0.5rem 2.5rem;
+  border: 1px solid var(--very-dark-gray);
+  background-color: var(--white);
+  text-transform: uppercase;
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  cursor: pointer;
+  transition: color 0.3s linear;
+}
+
+.btn:hover {
+  color: var(--white);
+  border: none;
+  background-color: var(--black);
+}
+
+/* =======Galley Images =========== */
+.gallery-images {
+  display: grid;
+  grid-template-columns: repeat(4, 256px);
+  grid-auto-rows: 450px;
+  gap: 1rem;
+  margin-top: 5rem;
+}
+.gallery-image {
+  width: 100%;
+  position: relative;
+}
+.gallery-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.gallery-image span {
+  color: var(--white);
+  position: absolute;
+  font-size: 1.5rem;
+  bottom: 2rem;
+  left: 1rem;
+  width: 45%;
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(133, 131, 131, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-image:hover .img-overlay {
+  opacity: 1;
+}
+.gallery-image:hover span {
+  color: var(--black);
+  z-index: 1;
+}
+/* =============footer================== */
+footer {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 2vw 5vw;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  width: 100%;
+}
+.footer-links {
+  display: grid;
+  width: 100%;
+}
+
+footer .nav-link {
+  margin-top: 1rem;
+}
+.social-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  padding-left: 50%;
+}
+.social-links .nav-link:hover {
+  color: var(--dark-gray);
+  border: none;
+}
+
+.social-links-container p {
+  margin-top: 1rem;
+  color: var(--very-dark-gray);
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+
+.hamburger-icon {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+aside.hide {
+  display: none;
+}
+
+svg:hover path {
+  fill: var(--very-dark-gray);
+}
+
+/* ====================Tablet ====================== */
+
+@media screen and (min-width: 768px) and (max-width: 1119px) {
+  /* ============side menu=========== */
+  .side-menu {
+    background-color: var(--black);
+    color: var(--white);
+    width: 100%;
+    height: 650px;
+    padding: 0 2rem;
+    top: 0;
+    left: 0;
+    position: absolute;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+  }
+
+  .side-menu .nav-links {
+    display: grid;
+    gap: 2rem;
+    position: absolute;
+    top: 35%;
+    left: 15%;
+  }
+  .close-btn {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 5%;
+    right: 2rem;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .hero-content {
+    font-size: 3.5rem;
+    width: 60%;
+    height: auto;
+  }
+  .about-us-content {
+    left: 50vw;
+  }
+
+  .about-us-container img {
+    width: 80%;
+  }
+  .gallery-container {
+    width: 100%;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .btn {
+    padding: 0.5rem 2rem;
+  }
+  .gallery-images {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 250px;
+  }
+}
+
+/* ====================Mobile ====================== */
+@media (max-width: 599px) {
+  .hero-container nav {
+    padding-right: 5vw;
+  }
+  .gallery-images {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 150px;
+  }
+
+  .hero-content {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    height: auto;
+    display: grid;
+    align-content: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero-container nav {
+    padding-right: 5vw;
+  }
+
+  .hero-container .hamburger-icon.hide {
+    display: block;
+  }
+
+  .hero-container .nav-links {
+    display: none;
+  }
+  /* ============side menu=========== */
+  .side-menu {
+    background-color: var(--black);
+    color: var(--white);
+    width: 100%;
+    height: 650px;
+    padding: 0 2rem;
+    top: 0;
+    left: 0;
+    position: absolute;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+  }
+
+  .side-menu .nav-links {
+    display: grid;
+    gap: 2.5rem;
+    position: absolute;
+    top: 30%;
+    left: 5vw;
+  }
+  .close-btn {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 5vw;
+    top: 3vw;
+    cursor: pointer;
+  }
+  .hero-container {
+    background-image: url("../public/images/mobile/image-hero.jpg");
+  }
+
+  .hero-content {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    height: auto;
+    font-size: 3rem;
+    display: grid;
+    align-content: center;
+  }
+
+  .about-us-content {
+    background-color: var(--white);
+    position: relative;
+    top: 0;
+    left: 0;
+    padding-top: 2.95rem;
+    padding-left: 0;
+    display: grid;
+    text-align: center;
+  }
+
+  .about-us-container img {
+    width: 100%;
+  }
+  .gallery-container {
+    width: 100%;
+  }
+  .gallery-images {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 150px;
+  }
+
+  footer {
+    width: 100%;
+    display: grid;
+    text-align: center;
+    justify-content: center;
+  }
+
+  footer .nav-links {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .footer-navlinks {
+    padding-bottom: 1rem;
+  }
+
+  .footer-links {
+    width: 100%;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    padding: 0.3rem 2rem;
+    margin-left: 1rem;
+  }
+
+  footer .nav-link {
+    margin-top: 1rem;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    padding-left: 0;
+    /* padding-top: 1rem; */
+  }
+}
