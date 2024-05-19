@@ -9,9 +9,12 @@
     <script type="module" src="app.js" defer></script>
   </head>
   <body>
+
+      <!-- Design from Frontend Mentor Coded by Naaninge Tomanga -->
+
     <!-- hero -->
     <div class="hero-container">
-        <!-- navigation -->
+      <!-- navigation -->
       <nav>
         <div class="logo">
           <a
@@ -124,7 +127,6 @@
       </nav>
       <div class="img-background"></div>
 
-      <!-- <img src="./public/images/desktop/image-hero.jpg" alt="hero image" /> -->
       <div class="hero-content">
         <p>Immersive experiences that deliver</p>
       </div>
@@ -132,9 +134,16 @@
 
     <main>
       <!-- about -->
+
       <section>
-        <!-- <AD></AD> -->
-        <div class="ad-container"></div>
+        <!-- ad header -->
+        <div class="ad-container premium">
+          <a class="anchorElement">
+            <img class="advertIMG" />
+            <p class="headerText"></p>
+          </a>
+        </div>
+
         <div class="about-us-container">
           <img
             src="./public/images/desktop/image-interactive.jpg"
@@ -151,26 +160,57 @@
             </p>
           </div>
         </div>
-        <!-- <AD></AD> -->
-        <div class="ad-container"></div>
+       
       </section>
+
+       <div id="standard-ads" class="responsive-ads">
+
+          <!-- <AD></AD> -->
+          <div class="ad-container">
+            <a class="anchorElement">
+              <img class="advertIMG" />
+              <p class="headerText"></p>
+            </a>
+          </div>
+            <!-- <AD></AD> -->
+            <div class="ad-container">
+              <a class="anchorElement">
+                <img class="advertIMG" />
+                <p class="headerText"></p>
+              </a>
+            </div>
+            
+        </div>
 
       <!-- gallery -->
       <section>
         <div class="gallery-container">
+         
           <div class="gallery-top">
             <p class="heading">Our creations</p>
             <button class="btn">See all</button>
           </div>
-          <!-- <AD></AD> -->
-          <div class="ad-container"></div>
+         
           <div class="gallery-images"></div>
-          <!-- <AD></AD> -->
-          <div class="ad-container"></div>
-        </div>
-        <!-- <AD></AD> -->
-        <div class="ad-container"></div>
+          
       </section>
+      <!-- footer ads -->
+       <div id="basic-ads" class="responsive-ads">
+          <!-- <AD></AD> -->
+          <div class="ad-container">
+            <a class="anchorElement">
+              <img class="advertIMG" />
+              <p class="headerText"></p>
+            </a>
+          </div>
+          <!-- <AD></AD> -->
+          <div class="ad-container">
+            <a class="anchorElement">
+              <img class="advertIMG" />
+              <p class="headerText"></p>
+            </a>
+          </div>
+           </div>
     </main>
     <footer>
       <section class="footer-links">
