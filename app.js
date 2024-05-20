@@ -96,8 +96,56 @@ const adConfigs = [
   },
 ];
 
-// get and apply ads for each ad container
+// Function adds class with width and height based on ad type
+const addClassesBasedOnType = (container, type) => {
+  // Remove existing classes to prevent duplication
+  const adAnchor = container.querySelector(".anchorElement")
+ adAnchor.classList.remove(
+    "vertical-strips",
+    "thick-vertical",
+    "thick-horizontal",
+    "light-square",
+    "horizontal-strip",
+    "dark-square"
+  );
+
+  // Add class based on ad type
+  switch (type) {
+    case "Vertical Strips":
+     adAnchor.classList.add("vertical-strips");
+      break;
+    case "Thick Vertical":
+     adAnchor.classList.add("thick-vertical");
+      break;
+    case "Thick Horizontal":
+     adAnchor.classList.add("thick-horizontal");
+      break;
+    case "Light Square":
+     adAnchor.classList.add("light-square");
+      break;
+    case "Horizontal Strip":
+     adAnchor.classList.add("horizontal-strip");
+      break;
+    case "Dark Square":
+     adAnchor.classList.add("dark-square");
+      break;
+    default:
+      // Default to "light-square" class if type is not recognized
+     adAnchor.classList.add("light-square");
+      break;
+  }
+};
+
+
+
+// Get and apply ads for each ad container
 adContainers.forEach((container, index) => {
   const { type, tags } = adConfigs[index % adConfigs.length];
+
+  // Add appropriate CSS class based on ad type
+  addClassesBasedOnType(container, type);
+
   getAd(container, type, tags);
 });
+
+
