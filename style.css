@@ -203,7 +203,7 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 10px; 
+  gap: 10px;
 }
 
 #standard-ads .ad-container:nth-child(1) {
@@ -423,6 +423,16 @@ svg:hover path {
     height: auto;
     display: grid;
     align-content: center;
+  }
+  #standard-ads {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  #standard-ads .ad-container:nth-child(1),
+  #standard-ads .ad-container:nth-child(2) {
+    grid-column: 1;
+    grid-row: auto;
   }
 }
 
