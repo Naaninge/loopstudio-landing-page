@@ -478,7 +478,7 @@ svg:hover path {
     cursor: pointer;
   }
   .hero-container {
-    background-image: url("../public/images/mobile/image-hero.jpg");
+    background-image: url("./public/images/mobile/image-hero.jpg");
   }
 
   .hero-content {
